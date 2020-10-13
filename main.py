@@ -59,22 +59,26 @@ textlist = d['text']
 textstr = ''.join(textlist)
 #print(textlist)
 
-subject_dict ={'sbp.mech@':'OR' , 'Tapase':'IFP', 'Kadam':'ICE', 'bhavikatti':'TOM'}
+subject_dict ={'dictionary of professor and subject'}
 
-prof_list = ['sbp.mech@' , 'Tapase','KADAM', 'Kadam', 'bhavikatti']
+prof_list = ['List of professor names']
 val = 0
 for i in prof_list:
     for val, j in enumerate(textlist):
         if j == 'UTC':
             date_ind = val -2
             break
+        else:
+            date_ind = -3
 
 
-
-    if i in textstr:
-        dest_folder = "/Users/adityapotnis/Desktop/Sem5/Screen_recordings/" + subject_dict[i]+"/" + subject_dict[i] + textlist[date_ind]+'.mp4'
-        if not os.path.exists(dest_folder):
-            os.makedirs(dest_folder)
+    if (i in textstr) or (date_ind == -3):
+        dest_folder = "$Enter Folder directory$" + subject_dict[i]+"/" + subject_dict[i] + textlist[date_ind]+'.mp4'
+    else:
+        est_folder = "$Enter Folder directory$" + subject_dict[i]+"/" + subject_dict[i] + +'.mp4'
+        
+    if not os.path.exists(dest_folder):
+        os.makedirs(dest_folder)
 
         shutil.move(filename, dest_folder)
 
