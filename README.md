@@ -5,4 +5,4 @@ Sorts MS-Teams Lecture recordings that have been downloaded to device. As the na
 - [x] Currently sorting to directories and folder by using dictionaries and lists.
 
 
-- [] Changes to come - sorting via a reading a text file for instructions.
+- [ ] Changes to come - sorting via a reading a text file for instructions.
