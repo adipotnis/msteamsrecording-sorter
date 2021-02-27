@@ -59,9 +59,9 @@ textlist = d['text']
 textstr = ''.join(textlist)
 #print(textlist)
 
-subject_dict ={'dictionary of professor and subject'}
+subject_dict ={'dictionary of professor and subject'} # Type for required code. Replace with reading text file
 
-prof_list = ['List of professor names']
+prof_list = ['List of professor names']# Name of professor related to subject. Replace with text file.
 val = 0
 for i in prof_list:
     for val, j in enumerate(textlist):
